@@ -1,4 +1,6 @@
 PREPROCESSING/
 LEVEL1/
 LEVEL2/
+*.mat
+*~
 
