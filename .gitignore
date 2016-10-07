@@ -4,3 +4,5 @@ LEVEL2/
 *.mat
 *~
 RESULTS/
+
+*.DS_Store
