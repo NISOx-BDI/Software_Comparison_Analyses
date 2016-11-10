@@ -8,3 +8,4 @@ ds005/
 ds200/
 
 *.DS_Store
+*.pyc
