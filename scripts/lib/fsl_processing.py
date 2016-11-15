@@ -1,4 +1,6 @@
 import os
+import time
+import sys
 from subprocess import check_call
 import glob
 import re
@@ -98,6 +100,22 @@ def create_onset_files(study_dir, OnsetDir, conditions):
     return cond_files
 
 
+def wait_for_feat(report_file):
+    running = True
+    while running:
+        time.sleep(10)
+
+        with open(report_file, "r") as fp:
+            report_head = fp.read()
+            if "STILL RUNNING" not in report_head:
+                running = False
+                # Add a new line after all the dots
+                print(" ")
+            else:
+                print("."),
+                sys.stdout.flush()
+
+
 def run_run_level_analyses(preproc_dir, run_level_fsf, level1_dir, cond_files):
 
     scripts_dir = os.path.join(preproc_dir, os.pardir, 'SCRIPTS')
@@ -138,8 +156,9 @@ def run_run_level_analyses(preproc_dir, run_level_fsf, level1_dir, cond_files):
                 f.write(run_fsf)
 
             cmd = "feat " + run_fsf_file
-            print(cmd)  
+            print(cmd)
             check_call(cmd, shell=True)
+
 
 # out_dir='/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-01/run-01'
 # fmri='/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/PREPROCESSING/FUNCTIONAL/sub-01_task-balloonanalogrisktask_run-01_bold'
@@ -178,6 +197,9 @@ def run_subject_level_analyses(level1_dir, sub_level_fsf, level2_dir):
         print(feat_dirs)
         for i, feat_dir in enumerate(feat_dirs):
             values['feat_' + str(i+1)] = feat_dir
+	    report_file = os.path.join(
+		feat_dir, 'report.html')
+	    wait_for_feat(report_file)
         with open(sub_level_fsf) as f:
             tpm = f.read()
             t = string.Template(tpm)
@@ -188,7 +210,7 @@ def run_subject_level_analyses(level1_dir, sub_level_fsf, level2_dir):
             f.write(sub_fsf)
 
         cmd = "feat " + sub_fsf_file
-        print(cmd) 
+        print(cmd)
         check_call(cmd, shell=True)
 
 # out_dir='/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-01/combined'
@@ -197,7 +219,7 @@ def run_subject_level_analyses(level1_dir, sub_level_fsf, level2_dir):
 # feat_3=/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-01/run-03.feat
 
 
-def run_group_level_analysis(level1_dir, group_level_fsf, level2_dir,
+def run_group_level_analysis(level2_dir, group_level_fsf, level3_dir,
                              contrast_id):
 
     scripts_dir = os.path.join(level2_dir, os.pardir, 'SCRIPTS')
@@ -206,15 +228,18 @@ def run_group_level_analysis(level1_dir, group_level_fsf, level2_dir,
         os.mkdir(scripts_dir)
 
     values = dict()
-    values['out_dir'] = level2_dir
+    values['out_dir'] = level3_dir
 
     feat_dirs = glob.glob(
         os.path.join(
-            level1_dir, 'sub-*', "combined.gfeat",
+            level2_dir, 'sub-*', "combined.gfeat",
             "cope" + contrast_id + ".feat"))
 
     for i, feat_dir in enumerate(feat_dirs):
         values['feat_' + str(i+1)] = feat_dir
+	report_file = os.path.join(
+	    feat_dir, 'report.html')
+	wait_for_feat(report_file) 
 
     with open(group_level_fsf) as f:
         tpm = f.read()
@@ -225,7 +250,7 @@ def run_group_level_analysis(level1_dir, group_level_fsf, level2_dir,
     with open(group_fsf_file, "w") as f:
         f.write(sub_fsf)
 
-    cmd = "feat " + group_fsf_file 
+    cmd = "feat " + group_fsf_file
     print(cmd)
     check_call(cmd, shell=True)
 
