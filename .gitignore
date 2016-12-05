@@ -9,3 +9,5 @@ ds200/
 
 *.DS_Store
 *.pyc
+
+_ignored/*
