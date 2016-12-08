@@ -9,3 +9,6 @@ ds200/
 
 *.DS_Store
 *.pyc
+
+Neurovault_data/
+.ipynb_checkpoints/
