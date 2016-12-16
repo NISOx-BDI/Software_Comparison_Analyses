@@ -9,3 +9,12 @@ ds200/
 
 *.DS_Store
 *.pyc
+
+# Data directories
+Neurovault_data/
+*_OLD*/
+
+*.nii.gz
+input/data/
+
+*.ipynb_checkpoints
