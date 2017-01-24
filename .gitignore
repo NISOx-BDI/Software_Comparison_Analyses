@@ -1,7 +1,12 @@
 PREPROCESSING/
 LEVEL1/
-LEVEL2/
+*.BRIK
+*.HEAD
+*.nii
+*.gz
 *.mat
+*.img
+*.zip
 *~
 RESULTS/
 ds005/
