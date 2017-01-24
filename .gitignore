@@ -6,7 +6,10 @@ LEVEL2/
 RESULTS/
 ds005/
 ds200/
-
+input/
+Neurovault_data/
+.ipynb_checkpoints/
+scripts/AFNI_sub01_output
 *.DS_Store
 *.pyc
 
