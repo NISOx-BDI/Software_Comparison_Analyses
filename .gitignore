@@ -5,6 +5,7 @@
 *.img
 *.zip
 *.mat
+*.ppm
 *~
 RESULTS/
 ds005/
