@@ -23,9 +23,13 @@ tsplot_index
 RESULTS/
 ds005/
 ds200/
-
+input/
+Neurovault_data/
+.ipynb_checkpoints/
+scripts/AFNI_sub01_output
 *.DS_Store
 *.pyc
+_ignored/*
 
 # Data directories
 Neurovault_data/
