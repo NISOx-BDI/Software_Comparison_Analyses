@@ -1,0 +1,4 @@
+
+/bin/rm -f stats/zem* stats/zols* stats/mask* ; /bin/mv dof stats
+
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 2 -m mask -r stats/res4d > stats/smoothness
