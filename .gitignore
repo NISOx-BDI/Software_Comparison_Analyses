@@ -6,6 +6,11 @@
 *.zip
 *.mat
 *.ppm
+*.par
+*.rms
+*.con
+*.frf
+*.min
 *~
 RESULTS/
 ds005/
