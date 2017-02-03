@@ -1,0 +1,9 @@
+</pre><hr>Initialisation<br><pre>
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/PREPROCESSING/FUNCTIONAL/sub-03_task-balloonanalogrisktask_run-03_bold prefiltered_func_data -odt float
+Total original volumes = 300
+Deleting 2 volume(s) - BE WARNED for future analysis!
+
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data prefiltered_func_data 2 298
+
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 149 1
