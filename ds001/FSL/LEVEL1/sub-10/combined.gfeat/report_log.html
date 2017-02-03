@@ -1,0 +1,163 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Mon Nov 14 19:13:36 GMT 2016<p>
+Feat main script<br><pre>
+
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/../SCRIPTS/sub-10_level2.fsf design.fsf
+
+/usr/local/packages/fsl-5.0.8/bin/feat_model design
+
+mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat -gfeatprep
+job
+306434
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 306434  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat -I 1 -flame1
+job
+306435
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 306435 -t ./.flame
+job
+306436
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 306436  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat -flame3
+job
+306437
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 306437  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat -poststats 1
+job
+306438
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 306438  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat -stop
+job
+306439
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 306439  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/combined.gfeat -stop
+job
+306440
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/usr/local/packages/fsl-5.0.8/bin/featregapply /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in example_func -out frgrot_2x3Feb -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mean_func -out frgrot_BCOHpr -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_6H96Sq -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_EwW4RW -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mask -out frgrot_RjmOXx -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in reg/highres -out frgrot_GLIjcO -applyxfm -init reg/highres2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/featregapply /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in example_func -out frgrot_e02svT -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mean_func -out frgrot_0J4272 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_I9bx9r -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_OePm9N -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mask -out frgrot_ioaaNg -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in reg/highres -out frgrot_lgMnzx -applyxfm -init reg/highres2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/featregapply /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in example_func -out frgrot_9R1XJJ -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mean_func -out frgrot_aDwez3 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/cope1 -out frgrot_feXYD9 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in stats/varcope1 -out frgrot_Dz6TNB -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in mask -out frgrot_AaMs2d -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref reg/standard -in reg/highres -out frgrot_DDXcIj -applyxfm -init reg/highres2standard.mat -interp spline -datatype float
+
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t bg_image  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/reg/highres /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/reg/highres /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/reg/highres
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths bg_image -inm 1000 -Tmean bg_image -odt float
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mask  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/mask /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/mask /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/mask
+
+mkdir -p inputreg
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths ../mask -mul 3 -Tmean masksum -odt short
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths masksum -thr 3 -add masksum masksum
+
+/usr/local/packages/fsl-5.0.8/bin/overlay 0 0 -c ../bg_image -a masksum 0.9 6 masksum_overlay
+
+/usr/local/packages/fsl-5.0.8/bin/slicer masksum_overlay -S 2 750 masksum_overlay.png
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths masksum -mul 0 maskunique
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths masksum -thr 2 -uthr 2 -bin -mul maskunique maskunique
+
+/usr/local/packages/fsl-5.0.8/bin/overlay 0 0 ../bg_image -a maskunique 0.9 3 maskunique_overlay
+
+/usr/local/packages/fsl-5.0.8/bin/slicer maskunique_overlay -S 2 750 maskunique_overlay.png
+
+/bin/cp /usr/local/packages/fsl-5.0.8/etc/luts/ramp.gif .ramp.gif
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths mask -Tmin mask
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mean_func  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/mean_func /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/mean_func /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/mean_func
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths mean_func -Tmean mean_func
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t cope1  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/stats/cope1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/stats/cope1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/stats/cope1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths cope1 -mas mask cope1
+
+printf '0.450870933333 ' >> design.lcon
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t varcope1  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/stats/varcope1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/stats/varcope1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/stats/varcope1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths varcope1 -mas mask varcope1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/stats/cope1 -mul 0 -add 270   /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/stats/FEtdof_t1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/stats/cope1 -mul 0 -add 270   /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/stats/FEtdof_t1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/stats/cope1 -mul 0 -add 270   /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/stats/FEtdof_t1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t tdof_t1  /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-02.feat/reg_standard/stats/FEtdof_t1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-03.feat/reg_standard/stats/FEtdof_t1 /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-10/run-01.feat/reg_standard/stats/FEtdof_t1
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths tdof_t1 -mas mask tdof_t1
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
