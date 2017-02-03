@@ -1,6 +1,9 @@
-PREPROCESSING/
-LEVEL1/
-LEVEL2/
+*.BRIK
+*.HEAD
+*.nii
+*.gz
+*.img
+*.zip
 *.mat
 *~
 RESULTS/
