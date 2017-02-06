@@ -1,0 +1,26 @@
+
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/PREPROCESSING/../SCRIPTS/sub-06_run-03_level1.fsf design.fsf
+
+/usr/local/packages/fsl-5.0.8/bin/feat_model design 
+
+mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat -I 1 -init
+job
+306157
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat2_pre -j 306157  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat -I 1 -prestats
+job
+306158
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 18 -l logs -N feat3_film -j 306158  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat -I 1 -stats
+job
+306159
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 306159  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat -poststats 0 
+job
+306160
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 306158,306159,306160  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/run-03.feat -stop
+job
+306161
