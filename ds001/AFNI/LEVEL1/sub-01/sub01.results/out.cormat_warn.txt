@@ -1,0 +1,13 @@
+
+Warnings regarding Correlation Matrix: X.xmat.1D
+
+  severity   correlation   cosine  regressor pair
+  --------   -----------   ------  ----------------------------------------
+  high:         0.919       0.929  (15 vs. 17)           cash_demean#0  vs.  cash_RT#0
+  high:         0.906       0.947  (23 vs. 25)          pumps_demean#0  vs.  pumps_RT#0
+  high:         0.903       0.931  (18 vs. 20)  control_pumps_demean#0  vs.  control_pumps_RT#0
+  medium:      -0.588       0.002  (18 vs. 23)  control_pumps_demean#0  vs.  pumps_demean#0
+  medium:      -0.566       0.002  (18 vs. 25)  control_pumps_demean#0  vs.  pumps_RT#0
+  medium:      -0.560       0.002  (20 vs. 23)      control_pumps_RT#0  vs.  pumps_demean#0
+  medium:      -0.539       0.002  (20 vs. 25)      control_pumps_RT#0  vs.  pumps_RT#0
+
