@@ -29,6 +29,10 @@ Neurovault_data/
 scripts/AFNI_sub01_output
 *.DS_Store
 *.pyc
+
+Neurovault_data/
+.ipynb_checkpoints/
+
 _ignored/*
 
 # Data directories
@@ -39,3 +43,4 @@ Neurovault_data/
 input/data/
 
 *.ipynb_checkpoints
+
