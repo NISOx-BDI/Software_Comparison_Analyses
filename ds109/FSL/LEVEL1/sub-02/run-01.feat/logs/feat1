@@ -1,0 +1,21 @@
+
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/SCRIPTS/sub-02_run-01_level1.fsf design.fsf
+
+/usr/local/packages/fsl-5.0.8/bin/feat_model design 
+
+mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat -I 1 -init
+29052
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 47 -l logs -N feat2_pre -j 29052  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat -I 1 -prestats
+29133
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 3 -l logs -N feat3_film -j 29133  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat -I 1 -stats
+30916
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 30916  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat -poststats 0 
+31225
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 29133,30916,31225  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/LEVEL1/sub-02/run-01.feat -stop
+31937
