@@ -1,0 +1,6 @@
+</pre><hr>Initialisation<br><pre>
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/FSL/PREPROCESSING/FUNCTIONAL/sub-32_task-theoryofmindwithmanualresponse_run-02_bold prefiltered_func_data -odt float
+Total original volumes = 179
+
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 89 1
