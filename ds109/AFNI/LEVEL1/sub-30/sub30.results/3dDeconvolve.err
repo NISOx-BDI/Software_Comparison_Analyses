@@ -1,0 +1,4 @@
+*+ WARNING: Smallest FDR q [8 false_photo_story#0_Tstat] = 0.115289 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [9 false_photo_story_Fstat] = 0.115107 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [14 false_belief_vs_false_photo_GLT#0_Tstat] = 0.492629 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [15 false_belief_vs_false_photo_GLT_Fstat] = 0.492003 ==> few true single voxel detections

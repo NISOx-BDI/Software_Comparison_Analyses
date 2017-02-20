@@ -1,0 +1,34 @@
+++ 3dAllineate: AFNI version=AFNI_17.0.09 (Feb 10 2017) [64-bit]
+++ Authored by: Zhark the Registrator
+++ Source dataset: ./anat_final.sub18+tlrc.HEAD
+++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
+++ Loading datasets
+++ 1422432 voxels in source_automask+0
+++ Zero-pad: xbot=3 xtop=2
+++ Zero-pad: ybot=4 ytop=4
+++ Zero-pad: zbot=1 ztop=3
+++ Computing -autobox
+++ 208155 voxels [90.7%] in weight mask
+++ Number of points for matching = 97832
+++ Local correlation: blok type = 'RHDD(11.07)'
+[7m*+ WARNING:[0m No output dataset will be calculated
+++ OpenMP thread count = 4
+++ ========== sub-brick #0 ========== [total CPU to here=1.9 s]
+ + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
+++ allcost output: init #0
+   ls   = 0.22443
+   sp   = 0.292647
+   mi   = -0.648513
+   crM  = 0.0646464
+   nmi  = 0.855343
+   je   = 3.83459
+   hel  = -0.126808
+   crA  = 0.254484
+   crU  = 0.243726
+   lss  = 0.77557
+   lpc  = -0.110409
+   lpa  = 0.889591
+   lpc+ = 0.0440456
+   ncd  = 0.980744
+++ 3dAllineate: total CPU time = 2.1 sec  Elapsed = 2.4
+++ ###########################################################
