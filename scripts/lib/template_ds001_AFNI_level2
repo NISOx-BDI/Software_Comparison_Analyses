@@ -56,6 +56,4 @@ cd $level2_dir
   3dAFNItoNIFTI 3dMEMA_result_t_stat_masked+tlrc
   3dAFNItoNIFTI -prefix Positive_clustered_t_stat 3dMEMA_result_positive_t_stat_clustered+tlrc
   3dAFNItoNIFTI -prefix Negative_clustered_t_stat 3dMEMA_result_negative_t_stat_clustered+tlrc
-
-
-
+  3dAFNItoNIFTI mask+tlrc

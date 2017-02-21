@@ -1,0 +1,4 @@
+++ 3dOverlap: AFNI version=AFNI_17.0.09 (Feb 10 2017) [64-bit]
+#A=./full_mask.sub32+tlrc.BRIK  B=./mask_anat.sub32+tlrc.BRIK
+#A           #B           #(A uni B)   #(A int B)   #(A \ B)     #(B \ A)     %(A \ B)    %(B \ A)    Rx(B/A)    Ry(B/A)    Rz(B/A)
+63588        57305        67185        53708        9880         3597         15.5375      6.2769     0.8777     0.8474     1.0154

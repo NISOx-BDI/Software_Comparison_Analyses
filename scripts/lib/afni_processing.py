@@ -64,7 +64,6 @@ def create_afni_onset_files(study_dir, onset_dir, conditions, removed_TR_time, *
     # Create FSL onset files from BIDS
     if args:
         subject_ids = args[0]
-        print subject_ids
         create_fsl_onset_files(study_dir, onset_dir, conditions, removed_TR_time, subject_ids)
     else:
         create_fsl_onset_files(study_dir, onset_dir, conditions, removed_TR_time)
