@@ -1,6 +1,0 @@
-*+ WARNING: Smallest FDR q [2 false_belief_story#0_Tstat] = 0.539959 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [3 false_belief_story_Fstat] = 0.538749 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [11 false_photo_question#0_Tstat] = 0.119017 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [12 false_photo_question_Fstat] = 0.119016 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [14 false_belief_vs_false_photo_GLT#0_Tstat] = 0.385505 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [15 false_belief_vs_false_photo_GLT_Fstat] = 0.384673 ==> few true single voxel detections

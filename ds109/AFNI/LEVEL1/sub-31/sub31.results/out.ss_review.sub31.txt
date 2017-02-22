@@ -29,17 +29,17 @@ degrees of freedom left   : 336
 TRs censored              : 4
 censor fraction           : 0.011173
 num regs of interest      : 4
-num TRs per stim (orig)   : 144 132 144 139
-num TRs censored per stim : 0 4 0 0
-fraction TRs censored     : 0.000 0.030 0.000 0.000
-ave mot per sresp (orig)  : 0.038024 0.044000 0.035344 0.035796
-ave mot per sresp (cens)  : 0.038024 0.039194 0.035344 0.035796
+num TRs per stim (orig)   : 189 160 190 169
+num TRs censored per stim : 4 4 0 0
+fraction TRs censored     : 0.021 0.025 0.000 0.000
+ave mot per sresp (orig)  : 0.041760 0.042791 0.035819 0.036346
+ave mot per sresp (cens)  : 0.038386 0.038816 0.035819 0.036346
 
-TSNR average              : 239.69
-global correlation (GCOR) : 0.0895566
+TSNR average              : 242.251
+global correlation (GCOR) : 0.098079
 anat/EPI mask Dice coef   : 0.852926
-maximum F-stat (masked)   : 93.8069
-blur estimates (ACF)      : 0.589553 5.96645 14.4672
-blur estimates (FWHM)     : 9.84838 9.87689 9.68563
+maximum F-stat (masked)   : 314.141
+blur estimates (ACF)      : 0.603606 5.92004 14.558
+blur estimates (FWHM)     : 9.78479 9.80891 9.62132
 
 
