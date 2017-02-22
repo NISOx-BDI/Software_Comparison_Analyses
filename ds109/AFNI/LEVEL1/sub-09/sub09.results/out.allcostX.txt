@@ -30,5 +30,5 @@
    lpa  = 0.722142
    lpc+ = -0.0946227
    ncd  = 0.975251
-++ 3dAllineate: total CPU time = 2.3 sec  Elapsed = 2.7
+++ 3dAllineate: total CPU time = 2.2 sec  Elapsed = 2.4
 ++ ###########################################################

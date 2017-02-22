@@ -13,7 +13,7 @@
 ++ Local correlation: blok type = 'RHDD(11.07)'
 [7m*+ WARNING:[0m No output dataset will be calculated
 ++ OpenMP thread count = 4
-++ ========== sub-brick #0 ========== [total CPU to here=2.2 s]
+++ ========== sub-brick #0 ========== [total CPU to here=2.1 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
    ls   = 0.29318
@@ -30,5 +30,5 @@
    lpa  = 0.87889
    lpc+ = 0.103733
    ncd  = 0.995741
-++ 3dAllineate: total CPU time = 2.4 sec  Elapsed = 2.8
+++ 3dAllineate: total CPU time = 2.3 sec  Elapsed = 2.5
 ++ ###########################################################
