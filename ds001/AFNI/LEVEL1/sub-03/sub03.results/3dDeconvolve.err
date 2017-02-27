@@ -10,5 +10,3 @@
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#1 has 2 times outside range 0 .. 594 [PSFB syndrome]
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#2 has 3 times outside range 0 .. 594 [PSFB syndrome]
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#3 has 2 times outside range 0 .. 594 [PSFB syndrome]
-*+ WARNING: Smallest FDR q [31 pumps_demean_vs_ctrl_demean_GLT#0_Tstat] = 0.133803 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [32 pumps_demean_vs_ctrl_demean_GLT_Fstat] = 0.133804 ==> few true single voxel detections
