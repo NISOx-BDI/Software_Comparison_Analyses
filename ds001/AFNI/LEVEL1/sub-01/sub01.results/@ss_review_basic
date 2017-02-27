@@ -299,15 +299,27 @@ if ( -f "$stats_dset" && -f $mask_dset ) then
 endif
 
 # ------------------------------------------------------------'
-# note blur estimates
+# note blur estimates (try for ACF and FWHM, first)
 set blur_file = blur_est.$subj.1D
 if ( -f $blur_file ) then
-    set best = `awk '/errts/ {print $1, $2, $3}' $blur_file`
-    if ( $#best != 3 ) then
-        set best = `awk '/epits/ {print $1, $2, $3}' $blur_file`
+    set found = 0
+    set best_acf = `grep ACF $blur_file | tail -n 1 | awk '{print $1, $2, $3}'`
+    set best_fw = `grep FWHM $blur_file | tail -n 1 | awk '{print $1, $2, $3}'`
+    if ( $#best_acf == 3 ) then
+        set found = 1
+        echo "blur estimates (ACF)      : $best_acf"
     endif
-    if ( $#best == 3 ) then
-        echo "blur estimates            : $best"
+    if ( $#best_fw == 3 ) then
+        set found = 1
+        echo "blur estimates (FWHM)     : $best_fw"
+    endif
+
+    # fallback
+    if ( ! $found ) then
+       set best = `tail -n 1 $blur_file | awk '{print $1, $2, $3}'`
+       if ( $#best == 3 ) then
+           echo "blur estimates            : $best"
+       endif
     endif
 endif
 
