@@ -39,7 +39,7 @@ TSNR average              : 105.251
 global correlation (GCOR) : 0.353905
 anat/EPI mask Dice coef   : 0.921426
 maximum F-stat (masked)   : 19.5014
-blur estimates (ACF)      : 0.64364 3.97727 12.8122
+blur estimates (ACF)      : 0.643645 3.97727 12.8123
 blur estimates (FWHM)     : 7.28442 7.14235 7.3917
 
 
