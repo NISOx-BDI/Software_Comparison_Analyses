@@ -1,0 +1,8 @@
+
+Warnings regarding Correlation Matrix: X.xmat.1D
+
+  severity   correlation   cosine  regressor pair
+  --------   -----------   ------  ----------------------------------------
+  medium:      -0.628       0.108  (12 vs. 20)   neutral#0  vs.  reward#0
+  medium:       0.446       0.390  (11 vs. 20)  Run#3Pol#3  vs.  reward#0
+
