@@ -1,4 +1,4 @@
-++ 3dAllineate: AFNI version=AFNI_17.0.09 (Feb 10 2017) [64-bit]
+++ 3dAllineate: AFNI version=AFNI_17.0.18 (Apr 11 2017) [64-bit]
 ++ Authored by: Zhark the Registrator
 ++ Source dataset: ./anat_final.sub01+tlrc.HEAD
 ++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
@@ -12,23 +12,23 @@
 ++ Number of points for matching = 436233
 ++ Local correlation: blok type = 'RHDD(7.38)'
 [7m*+ WARNING:[0m No output dataset will be calculated
-++ OpenMP thread count = 4
-++ ========== sub-brick #0 ========== [total CPU to here=1.2 s]
+++ OpenMP thread count = 15
+++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
-   ls   = 0.146333
-   sp   = 0.25807
-   mi   = -0.620667
-   crM  = 0.0440183
-   nmi  = 0.869966
-   je   = 4.15246
-   hel  = -0.129946
-   crA  = 0.211408
-   crU  = 0.237392
-   lss  = 0.853667
-   lpc  = -0.0209219
-   lpa  = 0.979078
-   lpc+ = 0.118209
+   ls   = 0.141277
+   sp   = 0.25831
+   mi   = -0.623733
+   crM  = 0.0423095
+   nmi  = 0.868753
+   je   = 4.12868
+   hel  = -0.130812
+   crA  = 0.207223
+   crU  = 0.232358
+   lss  = 0.858723
+   lpc  = -0.0106176
+   lpa  = 0.989382
+   lpc+ = 0.125823
    ncd  = 1
-++ 3dAllineate: total CPU time = 1.9 sec  Elapsed = 2.0
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.8
 ++ ###########################################################

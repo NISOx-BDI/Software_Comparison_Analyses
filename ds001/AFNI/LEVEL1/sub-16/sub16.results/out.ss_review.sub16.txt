@@ -1,0 +1,45 @@
+
+subject ID                : sub16
+TRs removed (per run)     : 2
+num stim classes provided : 7
+final anatomy dset        : anat_final.sub16+tlrc.HEAD
+final stats dset          : stats.sub16+tlrc.HEAD
+final voxel resolution    : 2.000000	2.000000	2.000000
+
+motion limit              : 0.3
+num TRs above mot limit   : 4
+average motion (per TR)   : 0.0750867
+average censored motion   : 0.0734372
+max motion displacement   : 1.91998
+max censored displacement : 1.79475
+outlier limit             : 0.1
+average outlier frac (TR) : 0.000954923
+num TRs above out limit   : 0
+
+num runs found            : 3
+num TRs per run           : 298 298 298
+num TRs per run (applied) : 296 296 295
+num TRs per run (censored): 2 2 3
+fraction censored per run : 0.00671141 0.00671141 0.0100671
+TRs total (uncensored)    : 894
+TRs total                 : 887
+degrees of freedom used   : 32
+degrees of freedom left   : 855
+
+TRs censored              : 7
+censor fraction           : 0.007830
+num regs of interest      : 11
+num TRs per stim (orig)   : 198 198 214 344 344 348 183 183 591 591 599
+num TRs censored per stim : 2 2 2 0 0 0 2 2 7 7 7
+fraction TRs censored     : 0.010 0.010 0.009 0.000 0.000 0.000 0.011 0.011 0.012 0.012 0.012
+ave mot per sresp (orig)  : 0.075993 0.075993 0.076896 0.071639 0.071639 0.071533 0.089626 0.089626 0.077049 0.077049 0.077164
+ave mot per sresp (cens)  : 0.072032 0.072032 0.073242 0.071639 0.071639 0.071533 0.087621 0.087621 0.074576 0.074576 0.074725
+
+TSNR average              : 155.935
+global correlation (GCOR) : 0.053996
+anat/EPI mask Dice coef   : 0.935894
+maximum F-stat (masked)   : 61.3013
+blur estimates (ACF)      : 0.787209 3.77096 12.4677
+blur estimates (FWHM)     : 6.48232 6.34113 6.47247
+
+
