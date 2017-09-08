@@ -1,4 +1,4 @@
-10.1638 10.3559 10.1601 10.2262   # epits FWHM blur estimates
-0.538187 6.22568 15.5131 16.36   # epits ACF blur estimates
-9.939 10.137 9.96884 10.0146   # errts FWHM blur estimates
-0.571307 5.9979 15.5485 15.7547   # errts ACF blur estimates
+9.57043 9.73436 9.56335 9.62239   # epits FWHM blur estimates
+0.574151 6.01584 16.3676 15.9606   # epits ACF blur estimates
+9.34181 9.50747 9.36258 9.40367   # errts FWHM blur estimates
+0.60024 5.87807 16.3519 15.517   # errts ACF blur estimates
