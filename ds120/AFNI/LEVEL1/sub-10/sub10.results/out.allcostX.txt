@@ -1,33 +1,33 @@
-++ 3dAllineate: AFNI version=AFNI_17.0.09 (Feb 10 2017) [64-bit]
+++ 3dAllineate: AFNI version=AFNI_17.0.18 (Apr 11 2017) [64-bit]
 ++ Authored by: Zhark the Registrator
 ++ Source dataset: ./anat_final.sub10+tlrc.HEAD
 ++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
 ++ Loading datasets
 ++ 241230 voxels in source_automask+0
-++ Zero-pad: xbot=1 xtop=2
-++ Zero-pad: ybot=4 ytop=3
+++ Zero-pad: xbot=0 xtop=1
+++ Zero-pad: ybot=4 ytop=2
 ++ Computing -autobox
-++ 285324 voxels [91.4%] in weight mask
-++ Number of points for matching = 134102
-++ Local correlation: blok type = 'RHDD(11.07)'
+++ 846720 voxels [87.9%] in weight mask
+++ Number of points for matching = 397958
+++ Local correlation: blok type = 'RHDD(7.38)'
 [7m*+ WARNING:[0m No output dataset will be calculated
-++ OpenMP thread count = 4
-++ ========== sub-brick #0 ========== [total CPU to here=0.4 s]
+++ OpenMP thread count = 15
+++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
-   ls   = 0.105739
-   sp   = 0.278728
-   mi   = -0.628783
-   crM  = 0.0323454
-   nmi  = 0.848291
-   je   = 3.51587
-   hel  = -0.140307
-   crA  = 0.179878
-   crU  = 0.18316
-   lss  = 0.894261
-   lpc  = 0.337564
-   lpa  = 0.662436
-   lpc+ = 0.43946
-   ncd  = 0.980681
-++ 3dAllineate: total CPU time = 0.5 sec  Elapsed = 0.6
+   ls   = 0.11796
+   sp   = 0.268892
+   mi   = -0.650309
+   crM  = 0.0393119
+   nmi  = 0.866989
+   je   = 4.23884
+   hel  = -0.146072
+   crA  = 0.19829
+   crU  = 0.200951
+   lss  = 0.88204
+   lpc  = 0.153856
+   lpa  = 0.846144
+   lpc+ = 0.265778
+   ncd  = 1
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
 ++ ###########################################################

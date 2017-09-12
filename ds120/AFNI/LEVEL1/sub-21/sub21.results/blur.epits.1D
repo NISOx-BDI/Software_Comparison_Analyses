@@ -1,12 +1,12 @@
 # old-style FWHM parameters
- 6.88325  6.96128  7.14478     6.99558
+ 6.53671  6.60517  6.8096     6.64949
 # ACF model parameters for a*exp(-r*r/(2*b*b))+(1-a)*exp(-r/c) plus effective FWHM
- 0.746569  3.93091  14.7779    10.2225
+ 0.771374  3.82245  15.6377    9.90497
 # old-style FWHM parameters
- 6.88614  7.0429  7.13513     7.02064
+ 6.53104  6.66282  6.78552     6.65898
 # ACF model parameters for a*exp(-r*r/(2*b*b))+(1-a)*exp(-r/c) plus effective FWHM
- 0.725818  3.89209  13.7674    10.1492
+ 0.752801  3.79476  14.3724    9.84765
 # old-style FWHM parameters
- 6.89395  6.98078  7.15817     7.01011
+ 6.54672  6.61993  6.82282     6.66214
 # ACF model parameters for a*exp(-r*r/(2*b*b))+(1-a)*exp(-r/c) plus effective FWHM
- 0.733724  3.92821  14.272    10.2379
+ 0.762406  3.82864  15.0212    9.92701

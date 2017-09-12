@@ -4,7 +4,7 @@ TRs removed (per run)     : 4
 num stim classes provided : 2
 final anatomy dset        : anat_final.sub02+tlrc.HEAD
 final stats dset          : stats.sub02+tlrc.HEAD
-final voxel resolution    : 3.000000	3.000000	3.000000
+final voxel resolution    : 2.000000	2.000000	2.000000
 
 motion limit              : 0.3
 num TRs above mot limit   : 80
@@ -35,11 +35,11 @@ fraction TRs censored     : 0.217 0.214 0.217 0.211 0.217 0.213 0.217 0.220 0.16
 ave mot per sresp (orig)  : 0.247257 0.239333 0.247257 0.244529 0.247257 0.238108 0.247257 0.248579 0.226544 0.228983 0.226544 0.226544 0.226544 0.233231 0.226544 0.228689
 ave mot per sresp (cens)  : 0.113174 0.112673 0.113174 0.112465 0.113174 0.112720 0.113174 0.111160 0.107763 0.108391 0.107763 0.107763 0.107763 0.108667 0.107763 0.108038
 
-TSNR average              : 93.3446
-global correlation (GCOR) : 0.534266
-anat/EPI mask Dice coef   : 0.939924
-maximum F-stat (masked)   : 6.52535
-blur estimates (ACF)      : 0.690575 3.96042 13.1453
-blur estimates (FWHM)     : 7.39081 7.30895 7.18091
+TSNR average              : 94.5493
+global correlation (GCOR) : 0.547577
+anat/EPI mask Dice coef   : 0.943469
+maximum F-stat (masked)   : 6.50185
+blur estimates (ACF)      : 0.720674 3.85031 13.7508
+blur estimates (FWHM)     : 6.99519 6.91282 6.81044
 
 
