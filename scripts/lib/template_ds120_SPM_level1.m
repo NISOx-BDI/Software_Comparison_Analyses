@@ -97,7 +97,7 @@ matlabbatch{6}.spm.spatial.normalise.write.subj(4).def(1) = cfg_dep('Segment: Fo
 matlabbatch{6}.spm.spatial.normalise.write.subj(4).resample(1) = cfg_dep('Segment: Bias Corrected (1)', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','channel', '()',{1}, '.','biascorr', '()',{':'}));
 matlabbatch{6}.spm.spatial.normalise.write.woptions.bb = [-78 -112 -70
                                                           78 76 85];
-matlabbatch{6}.spm.spatial.normalise.write.woptions.vox = [3 3 4];
+matlabbatch{6}.spm.spatial.normalise.write.woptions.vox = [2 2 2];
 matlabbatch{6}.spm.spatial.normalise.write.woptions.interp = 4;
 matlabbatch{6}.spm.spatial.normalise.write.woptions.prefix = 'w';
 matlabbatch{7}.spm.spatial.smooth.data(1) = cfg_dep('Normalise: Write: Normalised Images (Subj 1)', substruct('.','val', '{}',{6}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('()',{1}, '.','files'));
