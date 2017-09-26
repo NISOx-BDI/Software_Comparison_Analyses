@@ -1,4 +1,4 @@
-# 3dClustSim -prefix TT.fyCG0hK4bpX.CSim -LOTS -both -nodec -cmd TT.fyCG0hK4bpX.CSim.cmd -insdat /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/AFNI/LEVEL2/permutation_test/../mask.nii .//TT.fyCG0hK4bpX.000.sdat
+# 3dClustSim -prefix TT.ybIlw1jyBbr.CSim -LOTS -both -nodec -cmd TT.ybIlw1jyBbr.CSim.cmd -insdat /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds109/AFNI/LEVEL2/permutation_test/../mask.nii .//TT.ybIlw1jyBbr.000.sdat
 # bi-sided thresholding
 # Grid: 91x109x91 2.00x2.00x2.00 mm^3 (245683 voxels in mask)
 #

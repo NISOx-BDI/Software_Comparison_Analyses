@@ -1,2 +1,0 @@
- 4.690 = 1-sided 5% FPR
- 4.875 = 2-sided 5% FPR
