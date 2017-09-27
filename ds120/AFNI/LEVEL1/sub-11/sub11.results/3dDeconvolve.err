@@ -1,0 +1,6 @@
+*+ WARNING: Smallest FDR q [12 neutral#5_Tstat] = 0.202876 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [14 neutral#6_Tstat] = 0.321527 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [16 neutral#7_Tstat] = 0.108427 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [29 reward#5_Tstat] = 0.287521 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [31 reward#6_Tstat] = 0.530064 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [33 reward#7_Tstat] = 0.436167 ==> few true single voxel detections

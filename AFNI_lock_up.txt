@@ -1,0 +1,106 @@
+++ Skipping check for initial transients
+++ Input polort=4; Longest run=596.0 s; Recommended minimum polort=4 ++ OK ++
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times_AM2 1 using LOCAL times
+*+ WARNING: '-stim_times_AM2 1' (LOCAL) run#2 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ 607.332
+*+ WARNING: '-stim_times_AM2 1' (LOCAL) run#3 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ 596.624
+++ '-stim_times_AM2 1' average amplitude#1=-0.0508387
+++ ** GUESSED ** -stim_times_AM1 2 using LOCAL times
+*+ WARNING: '-stim_times_AM1 2' (LOCAL) run#2 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ 607.332
+*+ WARNING: '-stim_times_AM1 2' (LOCAL) run#3 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ 596.624
+++ ** GUESSED ** -stim_times_AM2 3 using LOCAL times
+++ '-stim_times_AM2 3' average amplitude#1=0
+++ ** GUESSED ** -stim_times_AM1 4 using LOCAL times
+++ ** GUESSED ** -stim_times_AM2 5 using LOCAL times
+*+ WARNING: '-stim_times_AM2 5' (LOCAL) run#1 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ 596.409
+++ '-stim_times_AM2 5' average amplitude#1=-0.0224516
+++ ** GUESSED ** -stim_times_AM2 6 using LOCAL times
+*+ WARNING: '-stim_times_AM2 6' (LOCAL) run#1 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.939
+*+ WARNING: '-stim_times_AM2 6' (LOCAL) run#2 has 5 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.942 -1.198 594.736 598.175 603.028
+*+ WARNING: '-stim_times_AM2 6' (LOCAL) run#3 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.942
+++ '-stim_times_AM2 6' average amplitude#1=0.00660793
+++ ** GUESSED ** -stim_times_AM1 7 using LOCAL times
+*+ WARNING: '-stim_times_AM1 7' (LOCAL) run#1 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.939
+*+ WARNING: '-stim_times_AM1 7' (LOCAL) run#2 has 5 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.942 -1.198 594.736 598.175 603.028
+*+ WARNING: '-stim_times_AM1 7' (LOCAL) run#3 has 1 times outside range 0 .. 594 [PSFB syndrome]
+ + dataset TR being used is 2 s -- unusable times follow
+ -3.942
+------------------------------------------------------------
+GLT matrix from 'SYM: pumps_demean -control_pumps_demean':
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  -1  -1   0   0   0   1   1   0   0   0   0   0   0   0 
+ 
+++ Number of time points: 894 (no censoring)
+ + Number of parameters:  32 [21 baseline ; 11 signal]
+++ Memory required for output bricks = 6,574,749,636 bytes (about 6.6 billion [giga])
+++ Wrote matrix image to file X.jpg
+++ Wrote matrix values to file X.xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix X.xmat.1D \
+ -input "pb04.sub01.r01.scale+tlrc.HEAD pb04.sub01.r02.scale+tlrc.HEAD pb04.sub01.r03.scale+tlrc.HEAD" \
+ -fout -tout -Rbuck stats.sub01_REML -Rvar stats.sub01_REMLvar \
+ -Rfitts fitts.sub01_REML -Rerrts errts.sub01_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file X.nocensor.xmat.1D
+++ ----- Signal+Baseline matrix condition [X] (894x32):  5.48958  ++ VERY GOOD ++
+++ ----- Signal-only matrix condition [X] (894x11):  2.7907  ++ VERY GOOD ++
+++ ----- Baseline-only matrix condition [X] (894x21):  5.37972  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (894x6):  3.49975  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (894x15):  1.01122  ++ VERY GOOD ++
+++ +++++ Matrix inverse average error = 1.89329e-15  ++ VERY GOOD ++
+++ Matrix setup time = 3.99 s
+++ Calculations starting; elapsed time=88.428
+++ voxel loop:0123456789.0123456789.0123456789.0123456789.0123456789.
+++ Calculations finished; elapsed time=13669.068
+++ Smallest FDR q [0 Full_Fstat] = 2.39405e-14
+++ Smallest FDR q [2 cash_demean#0_Tstat] = 0.014472
+++ Smallest FDR q [4 cash_demean#1_Tstat] = 0.0397761
+++ Smallest FDR q [5 cash_demean_Fstat] = 0.00888983
+*+ WARNING: Smallest FDR q [7 cash_RT#0_Tstat] = 0.999892 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [8 cash_RT_Fstat] = 0.994282 ==> few true single voxel detections
+++ Smallest FDR q [10 control_pumps_demean#0_Tstat] = 2.87697e-08
+++ Smallest FDR q [12 control_pumps_demean#1_Tstat] = 2.31125e-10
+++ Smallest FDR q [13 control_pumps_demean_Fstat] = 1.00742e-11
+*+ WARNING: Smallest FDR q [15 control_pumps_RT#0_Tstat] = 0.166424 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [16 control_pumps_RT_Fstat] = 0.165733 ==> few true single voxel detections
+++ Smallest FDR q [18 explode_demean#0_Tstat] = 5.82469e-11
+++ Smallest FDR q [20 explode_demean#1_Tstat] = 0.00854218
+++ Smallest FDR q [21 explode_demean_Fstat] = 1.33855e-10
+++ Smallest FDR q [23 pumps_demean#0_Tstat] = 4.17983e-10
+++ Smallest FDR q [25 pumps_demean#1_Tstat] = 6.00956e-07
+++ Smallest FDR q [26 pumps_demean_Fstat] = 5.77524e-12
+++ Smallest FDR q [28 pumps_RT#0_Tstat] = 0.000185522
+++ Smallest FDR q [29 pumps_RT_Fstat] = 0.000185519
+++ Smallest FDR q [31 pumps_demean_vs_ctrl_demean_GLT#0_Tstat] = 2.84652e-09
+++ Smallest FDR q [32 pumps_demean_vs_ctrl_demean_GLT_Fstat] = 2.84643e-09
+++ Wrote bucket dataset into ./stats.sub01+tlrc.BRIK
+ + created 21 FDR curves in bucket header
+^C
