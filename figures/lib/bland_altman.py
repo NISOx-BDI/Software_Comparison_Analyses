@@ -17,7 +17,7 @@ def bland_altman_plot(data1, data2, *args, **kwargs):
     
     return mean, diff, md, sd
 
-def bland_altman(afni_stat_file, spm_stat_file,
+def bland_altman(Title, afni_stat_file, spm_stat_file,
                  afni_reslice_spm, afni_spm_reslice,
                  fsl_stat_file=None, fsl_reslice_spm=None,
                  afni_fsl_reslice=None, afni_reslice_fsl=None, fsl_spm_reslice=None):
@@ -54,6 +54,7 @@ def bland_altman(afni_stat_file, spm_stat_file,
     # AFNI/FSL B-A plots
     if fsl_stat_file is not None:
         fig, axs = plt.subplots(ncols=2, figsize=(10, 4))
+        fig.suptitle(Title, fontsize=20, x=0.47, y=1.06)
         fig.subplots_adjust(hspace=1.0, wspace=0.4, left=0.07, right=0.93)
         
         ax = axs[0]
@@ -80,6 +81,8 @@ def bland_altman(afni_stat_file, spm_stat_file,
 
     # AFNI/SPM B-A plots
     fig, axs = plt.subplots(ncols=2, figsize=(10, 4))
+    if fsl_stat_file is None:
+        fig.suptitle(Title, fontsize=20, x=0.47, y=1.06)
     fig.subplots_adjust(hspace=1.0, wspace=0.4, left=0.07, right=0.93)
     
     ax = axs[0]
@@ -130,3 +133,62 @@ def bland_altman(afni_stat_file, spm_stat_file,
         cb.set_label('log10(N)')
 
         plt.show()
+
+def bland_altman_intra(Title, afni_stat_file, afni_perm_file,
+                 fsl_stat_file, fsl_perm_file,
+                 spm_stat_file, spm_perm_file):
+    plt.style.use('seaborn-colorblind')
+    
+    # Get data from stat images
+    afni_stat_dat = nib.load(afni_stat_file).get_data()
+    afni_perm_dat = nib.load(afni_perm_file).get_data()
+    fsl_stat_dat = nib.load(fsl_stat_file).get_data()
+    fsl_perm_dat = nib.load(fsl_perm_file).get_data()
+    spm_stat_dat = nib.load(spm_stat_file).get_data()
+    spm_perm_dat = nib.load(spm_perm_file).get_data()
+    
+    # Reshape to 1-dimension
+    afni_stat_1d = np.reshape(afni_stat_dat, -1)
+    afni_perm_1d = np.reshape(afni_perm_dat, -1)
+    fsl_stat_1d = np.reshape(fsl_stat_dat, -1)
+    fsl_perm_1d = np.reshape(fsl_perm_dat, -1)
+    spm_stat_1d = np.reshape(spm_stat_dat, -1)
+    spm_perm_1d = np.reshape(spm_perm_dat, -1)
+      
+    # AFNI Parametric/AFNI Permutation Bland-Altman
+    fig = plt.figure()
+    fig.suptitle(Title, fontsize=20, x=0.40, y=3.70)
+    fig.subplots_adjust(hspace=0.3, top=3.58, bottom=1.0, left=0.1, right=0.8)
+    ax1 = fig.add_subplot(311)      
+    mean, diff, md, sd = bland_altman_plot(afni_stat_1d, afni_perm_1d)
+    hb = ax1.hexbin(mean, diff, bins='log', cmap='viridis', gridsize=50)
+    ax1.axhline(linewidth=1, color='r')
+    ax1.set_title('AFNI Parametric/Permutation')
+    ax1.set_xlabel('Average of T-statistics')
+    ax1.set_ylabel('Difference of T-statistics (Para - Perm)')
+    cb = fig.colorbar(hb, ax=ax1)
+    cb.set_label('log10(N)')
+    
+    # FSL Parametric/FSL Permutation Bland-Altman
+    ax2 = fig.add_subplot(312)
+    mean, diff, md, sd = bland_altman_plot(fsl_stat_1d, fsl_perm_1d)
+    hb = ax2.hexbin(mean, diff, bins='log', cmap='viridis', gridsize=50)
+    ax2.axhline(linewidth=1, color='r')
+    ax2.set_title('FSL Parametric/Permutation')
+    ax2.set_xlabel('Average of T-statistics')
+    ax2.set_ylabel('Difference of T-statistics (Para - Perm)')
+    cb = fig.colorbar(hb, ax=ax2)
+    cb.set_label('log10(N)')
+
+    # SPM Parametric/SPM Permutation Bland-Altman
+    ax3 = fig.add_subplot(313)
+    mean, diff, md, sd = bland_altman_plot(spm_stat_1d, spm_perm_1d)
+    hb = ax3.hexbin(mean, diff, bins='log', cmap='viridis', gridsize=50)
+    ax3.axhline(linewidth=1, color='r')
+    ax3.set_title('SPM Parametric/Permutation')
+    ax3.set_xlabel('Average of T-statistics')
+    ax3.set_ylabel('Difference of T-statistics (Para - Perm)')
+    cb = fig.colorbar(hb, ax=ax3)
+    cb.set_label('log10(N)')
+
+    plt.show()
