@@ -18,17 +18,17 @@
 ++ allcost output: init #0
    ls   = 0.285004
    sp   = 0.368764
-   mi   = -0.605713
+   mi   = -0.605717
    crM  = 0.104194
    nmi  = 0.876695
-   je   = 4.30667
-   hel  = -0.112813
+   je   = 4.30668
+   hel  = -0.112814
    crA  = 0.323355
-   crU  = 0.304272
+   crU  = 0.304271
    lss  = 0.714996
-   lpc  = -0.395706
-   lpa  = 0.604294
-   lpc+ = -0.204136
+   lpc  = -0.395675
+   lpa  = 0.604325
+   lpc+ = -0.204106
    ncd  = 1
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.7
 ++ ###########################################################

@@ -36,10 +36,10 @@ ave mot per sresp (orig)  : 0.103203 0.105213 0.110983 0.103927
 ave mot per sresp (cens)  : 0.070786 0.068127 0.082074 0.084533
 
 TSNR average              : 219.488
-global correlation (GCOR) : 0.101499
+global correlation (GCOR) : 0.101501
 anat/EPI mask Dice coef   : 0.862678
-maximum F-stat (masked)   : 137.675
-blur estimates (ACF)      : 0.734286 5.53533 16.6989
-blur estimates (FWHM)     : 8.92054 8.98757 8.92714
+maximum F-stat (masked)   : 137.31
+blur estimates (ACF)      : 0.734304 5.53537 16.7
+blur estimates (FWHM)     : 8.92055 8.98762 8.92717
 
 
