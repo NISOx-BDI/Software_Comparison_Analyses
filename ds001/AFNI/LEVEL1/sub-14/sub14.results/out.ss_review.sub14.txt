@@ -35,11 +35,11 @@ fraction TRs censored     : 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.00
 ave mot per sresp (orig)  : 0.029491 0.029491 0.029519 0.029790 0.029790 0.029727 0.027746 0.027746 0.028768 0.028768 0.028741
 ave mot per sresp (cens)  : 0.029491 0.029491 0.029519 0.029790 0.029790 0.029727 0.027746 0.027746 0.028768 0.028768 0.028741
 
-TSNR average              : 185.131
-global correlation (GCOR) : 0.0247467
-anat/EPI mask Dice coef   : 0.915663
-maximum F-stat (masked)   : 67.8606
-blur estimates (ACF)      : 0.849702 3.82134 14.1187
-blur estimates (FWHM)     : 6.39174 6.25196 6.66632
+TSNR average              : 187.553
+global correlation (GCOR) : 0.0254006
+anat/EPI mask Dice coef   : 0.91811
+maximum F-stat (masked)   : 68.9204
+blur estimates (ACF)      : 0.843214 3.80001 13.6053
+blur estimates (FWHM)     : 6.33082 6.2494 6.60113
 
 
