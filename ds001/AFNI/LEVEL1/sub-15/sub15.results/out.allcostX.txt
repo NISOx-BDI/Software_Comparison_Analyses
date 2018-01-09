@@ -4,30 +4,30 @@
 ++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
 ++ Loading datasets
 ++ 228273 voxels in source_automask+0
-++ Zero-pad: ybot=0 ytop=3
+++ Zero-pad: ybot=0 ytop=2
 ++ Zero-pad: zbot=4 ztop=0
 ++ Computing -autobox
-++ 882791 voxels [91.2%] in weight mask
-++ Number of points for matching = 414911
+++ 892492 voxels [93.0%] in weight mask
+++ Number of points for matching = 419471
 ++ Local correlation: blok type = 'RHDD(7.38)'
 [7m*+ WARNING:[0m No output dataset will be calculated
 ++ OpenMP thread count = 15
 ++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
-   ls   = 0.135801
-   sp   = 0.258744
-   mi   = -0.672625
-   crM  = 0.0334408
-   nmi  = 0.856207
-   je   = 4.0051
-   hel  = -0.138629
-   crA  = 0.182967
-   crU  = 0.188979
-   lss  = 0.864199
-   lpc  = -0.10019
-   lpa  = 0.89981
-   lpc+ = 0.0154654
-   ncd  = 0.996814
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
+   ls   = 0.127528
+   sp   = 0.262454
+   mi   = -0.69948
+   crM  = 0.0270028
+   nmi  = 0.853837
+   je   = 4.08613
+   hel  = -0.15034
+   crA  = 0.164795
+   crU  = 0.177226
+   lss  = 0.872472
+   lpc  = -0.0529201
+   lpa  = 0.94708
+   lpc+ = 0.0441654
+   ncd  = 1
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.4
 ++ ###########################################################

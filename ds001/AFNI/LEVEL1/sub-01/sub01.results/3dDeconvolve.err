@@ -9,7 +9,7 @@
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#1 has 1 times outside range 0 .. 594 [PSFB syndrome]
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#2 has 5 times outside range 0 .. 594 [PSFB syndrome]
 *+ WARNING: '-stim_times_AM1 7' (LOCAL) run#3 has 1 times outside range 0 .. 594 [PSFB syndrome]
-*+ WARNING: Smallest FDR q [7 cash_RT#0_Tstat] = 0.854498 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [8 cash_RT_Fstat] = 0.850688 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [15 control_pumps_RT#0_Tstat] = 0.154472 ==> few true single voxel detections
-*+ WARNING: Smallest FDR q [16 control_pumps_RT_Fstat] = 0.153829 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [7 cash_RT#0_Tstat] = 0.691247 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [8 cash_RT_Fstat] = 0.688169 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [15 control_pumps_RT#0_Tstat] = 0.157566 ==> few true single voxel detections
+*+ WARNING: Smallest FDR q [16 control_pumps_RT_Fstat] = 0.156902 ==> few true single voxel detections

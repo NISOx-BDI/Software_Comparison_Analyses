@@ -8,27 +8,27 @@
 ++ Zero-pad: ybot=4 ytop=3
 ++ Zero-pad: zbot=4 ztop=0
 ++ Computing -autobox
-++ 900900 voxels [88.9%] in weight mask
-++ Number of points for matching = 423423
+++ 929070 voxels [91.6%] in weight mask
+++ Number of points for matching = 430404
 ++ Local correlation: blok type = 'RHDD(7.38)'
 [7m*+ WARNING:[0m No output dataset will be calculated
 ++ OpenMP thread count = 15
 ++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
-   ls   = 0.165291
-   sp   = 0.278155
-   mi   = -0.567879
-   crM  = 0.0562508
-   nmi  = 0.876262
-   je   = 4.02158
-   hel  = -0.114794
-   crA  = 0.23754
-   crU  = 0.250739
-   lss  = 0.834709
-   lpc  = -0.0501242
-   lpa  = 0.949876
-   lpc+ = 0.115806
-   ncd  = 1
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
+   ls   = 0.153455
+   sp   = 0.272756
+   mi   = -0.60258
+   crM  = 0.0450467
+   nmi  = 0.87191
+   je   = 4.10185
+   hel  = -0.12659
+   crA  = 0.21364
+   crU  = 0.23804
+   lss  = 0.846545
+   lpc  = 0.0435758
+   lpa  = 0.956424
+   lpc+ = 0.186594
+   ncd  = 0.999089
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.7
 ++ ###########################################################
