@@ -3,7 +3,7 @@
 ++ Source dataset: ./anat_final.sub15+tlrc.HEAD
 ++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
 ++ Loading datasets
-++ 235566 voxels in source_automask+0
+++ 235568 voxels in source_automask+0
 ++ Zero-pad: xbot=0 xtop=1
 ++ Zero-pad: ybot=2 ytop=4
 ++ Zero-pad: zbot=4 ztop=2
@@ -16,19 +16,19 @@
 ++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
-   ls   = 0.259094
-   sp   = 0.324376
-   mi   = -0.637823
-   crM  = 0.0820206
-   nmi  = 0.866682
-   je   = 4.14639
-   hel  = -0.119267
-   crA  = 0.287076
-   crU  = 0.267275
-   lss  = 0.740906
-   lpc  = -0.352428
-   lpa  = 0.647572
-   lpc+ = -0.179872
-   ncd  = 0.999104
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
+   ls   = 0.259097
+   sp   = 0.324377
+   mi   = -0.637832
+   crM  = 0.0820272
+   nmi  = 0.86668
+   je   = 4.14637
+   hel  = -0.11927
+   crA  = 0.287088
+   crU  = 0.267281
+   lss  = 0.740903
+   lpc  = -0.352421
+   lpa  = 0.647579
+   lpc+ = -0.179865
+   ncd  = 0.999074
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.6
 ++ ###########################################################

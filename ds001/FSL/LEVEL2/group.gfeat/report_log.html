@@ -5,10 +5,10 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Thu  5 Oct 13:33:22 BST 2017<p>
+Started at Wed 10 Jan 13:17:30 GMT 2018<p>
 Feat main script<br><pre>
 
-/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/../SCRIPTS/level3.fsf design.fsf
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/SCRIPTS/level3.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.10/bin/feat_model design
 
@@ -16,31 +16,31 @@ mkdir .files;cp /usr/local/packages/fsl-5.0.10/doc/fsl.css .files;cp -r /usr/loc
 
 /usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat -gfeatprep
 job
-318788
+322135
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 318788  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -I 1 -flame1
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 322135  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -I 1 -flame1
 job
-318789
+322136
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 318789 -t ./.flame
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 322136 -t ./.flame
 job
-318790
+322137
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 318790  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -flame3
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 322137  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -flame3
 job
-318791
+322138
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat4_post -j 318791  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -poststats 1
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat4_post -j 322138  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -poststats 1
 job
-318792
+322139
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 318792  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -stop
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 322139  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat -stop
 job
-318793
+322140
 
-/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 318793  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat -stop
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 322140  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL2/group.gfeat -stop
 job
-318794
+322141
 </pre><hr>Higher-level input files preparation<br><pre>
 
 /usr/local/packages/fsl-5.0.10/bin/featregapply /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/SOFTWARE_COMPARISON/ds001/FSL/LEVEL1/sub-06/combined.gfeat/cope1.feat

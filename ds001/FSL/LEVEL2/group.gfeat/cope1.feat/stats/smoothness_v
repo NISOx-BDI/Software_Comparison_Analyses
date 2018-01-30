@@ -15,10 +15,12 @@ Data (residuals/zstat):: Minimum and maximum intensities are: -774.07 and 654.37
 SSminus[X] = 3.18549e+06, SSminus[Y] = 3.147e+06, SSminus[Z] = 3.15284e+06, S2[X] = 3.49036e+06, S2[Y] = 3.49037e+06, S2[Z] = 3.49037e+06
 DLH 0.0877564 voxels^-3 before correcting for temporal DOF
 FWHMx = 3.89452 voxels, FWHMy = 3.65878 voxels, FWHMz = 3.69198 voxels
-FWHMx = 7.78904 mm, FWHMy = 7.31755 mm, FWHMz = 7.38396 mm
+FWHMx = 3.89452 mm, FWHMy = 3.65878 mm, FWHMz = 3.69198 mm
 DLH 0.0913066 voxels^-3
 VOLUME 245543 voxels
 RESELS 52.6077 voxels per resel
 DLH 0.0913066
 VOLUME 245543
 RESELS 52.6077
+FWHMvoxel 3.89452 3.89452 3.89452
+FWHMmm 7.78904 7.31755 7.38396

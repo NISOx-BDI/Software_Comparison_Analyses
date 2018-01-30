@@ -6,6 +6,7 @@ from lib.afni_processing import copy_raw, create_afni_onset_files
 from lib.afni_processing import run_subject_level_analyses
 from lib.afni_processing import run_group_level_analysis
 from lib.afni_processing import run_permutation_test
+from lib.afni_processing import mean_mni_images
 
 raw_dir = '/home/maullz/NIDM-Ex/BIDS_Data/DATA/BIDS/ds001_R2.0.4'
 
@@ -24,6 +25,7 @@ preproc_dir = os.path.join(afni_dir, 'PREPROCESSING')
 level1_dir = os.path.join(afni_dir, 'LEVEL1')
 level2_dir = os.path.join(afni_dir, 'LEVEL2')
 perm_dir = os.path.join(level2_dir, 'permutation_test')
+mni_dir = os.path.join(afni_dir, 'mean_mni_images')
 
 # Set default orientation to origin (instead of standardised space) for
 # ambiguous NIfTi (required for ds001)
@@ -70,7 +72,10 @@ perm_template = os.path.join(cwd, 'lib', 'template_ds001_AFNI_perm_test')
 run_subject_level_analyses(preproc_dir, onset_dir, level1_dir, sub_level_template)
 
 # Run the group-level GLM
-run_group_level_analysis(level1_dir, level2_dir, grp_level_template)
+#run_group_level_analysis(level1_dir, level2_dir, grp_level_template)
 
 # Run a permutation test
-run_permutation_test(level1_dir, perm_dir, perm_template)
+#run_permutation_test(level1_dir, perm_dir, perm_template)
+
+# Create mean and standard deviations maps of the mean func and anat images in MNI space
+#mean_mni_images(preproc_dir, level1_dir, mni_dir)

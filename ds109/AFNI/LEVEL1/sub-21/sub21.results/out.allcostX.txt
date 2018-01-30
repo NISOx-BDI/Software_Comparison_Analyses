@@ -3,7 +3,7 @@
 ++ Source dataset: ./anat_final.sub21+tlrc.HEAD
 ++ Base dataset:   ./final_epi_vr_base+tlrc.HEAD
 ++ Loading datasets
-++ 253289 voxels in source_automask+0
+++ 253284 voxels in source_automask+0
 ++ Zero-pad: xbot=1 xtop=1
 ++ Zero-pad: ybot=4 ytop=4
 ++ Zero-pad: zbot=4 ztop=0
@@ -17,18 +17,18 @@
  + initial Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
 ++ allcost output: init #0
    ls   = 0.203179
-   sp   = 0.329711
-   mi   = -0.595268
-   crM  = 0.0834865
-   nmi  = 0.876331
-   je   = 4.21818
-   hel  = -0.116924
-   crA  = 0.289119
+   sp   = 0.32971
+   mi   = -0.595263
+   crM  = 0.0834867
+   nmi  = 0.87633
+   je   = 4.21815
+   hel  = -0.116923
+   crA  = 0.28912
    crU  = 0.278944
    lss  = 0.796821
-   lpc  = -0.130568
-   lpa  = 0.869432
-   lpc+ = 0.0395255
+   lpc  = -0.130575
+   lpa  = 0.869425
+   lpc+ = 0.0395183
    ncd  = 1
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.7
 ++ ###########################################################
