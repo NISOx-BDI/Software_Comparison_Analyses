@@ -68,7 +68,7 @@ def download_data(nv_collection, study):
             ('FSL/LEVEL2/permutation_test/euler_chars.csv', 'fsl_perm_euler_chars.csv'),
             ('SPM/LEVEL2/permutation_test/euler_chars.csv', 'spm_perm_euler_chars.csv')):
 
-        url = "https://raw.githubusercontent.com/AlexBowring/Software_Comparison/mean_mni_images/" + study + "/" + euler_char_file
+        url = "https://raw.githubusercontent.com/AlexBowring/Software_Comparison/scatter_plots/" + study + "/" + euler_char_file
         local_file = os.path.join(data_dir, local_name)
         if not os.path.isfile(local_file):
             # Copy file locally in a the data directory
