@@ -129,6 +129,8 @@ Given:
     process_ds001_SPM
     ```
     
+    This will create onsets, preprocess the data, and run first and group level analyses. 
+    
 2. For the FSL analysis, from a terminal run:
 
     ```
@@ -172,11 +174,12 @@ Same as for ds000001, replacing all occurences of `001` by `109` and https://neu
 Same as for ds000001, replacing all occurences of `001` by `120` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2488/.
 
 # Contents overview
-
-<Summarise what's in this repository>
-
-
-# Software_Comparison
-To run an SPM (FSL) analysis, set the variables in the process_ds001_SPM.m (process_ds001_FSL.py) script found in the /scripts/ directory appropriately for the study you wish to analyse, 
-and then run the script in matlab by entering 'process_ds001_SPM.m' in the matlab command line while in the /scripts/ directory (or, run process_ds001_FSL.py from the terminal with 
-'python process_ds001_FSL.py' when in the /scripts/ directory). This will create onsets, preprocess the data, and run first and group level analyses. 
+```
+ 	ds001: Part of ds001 output data (excluding images)
+	ds109: Part of ds109 output data (excluding images)
+	ds120: Part of ds109 output data (excluding images)
+	figures: Scripts and notebooks to reproduce the figures
+	scripts: Scripts to rerun the analysis 
+	.gitignore: git configuration file
+	README.md: current file
+```
