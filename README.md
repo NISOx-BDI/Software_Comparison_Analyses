@@ -111,9 +111,11 @@ To run the experiments included in the manuscript, raw data must be downloaded f
  - ds000120 revision 1.0.0: https://openfmri.org/dataset/ds000120/
 
 ### Analysis of ds000001
+
+#### Data processing using SPM, FSL and AFNI
 Given:
  - `<PATH_TO_RAW_DATA>`: the path to the raw data for `ds000001` and
- - `<PATH_TO_OUTPUT>`: the path to the output folder where the results should be stored.
+ - `<PATH_TO_OUTPUT>`: the path to the output folder where the results should be stored (must end with a `ds001` sub-folder).
 
 1. In `scripts/process_ds001_SPM.m` replace the values of `study_dir` and `results_dir` by `<PATH_TO_RAW_DATA>` and `<PATH_TO_OUTPUT>` respectively.
 
@@ -138,16 +140,36 @@ Given:
     ```
     python scripts/process_ds001_AFNI.py
     ```
+    
+#### Derived data
 
+##### Derived images
+The derived data available on NeuroVault at https://neurovault.org/collections/2209/ can be reproduced as follows:
+
+1. NIDM-Results packs for SPM and FSL are available in `<PATH_TO_OUTPUT>/SPM/LEVEL2` and `<PATH_TO_OUTPUT>/FSL/LEVEL2` respectively.
+
+2. For the resliced images, inside Matlab run
+
+    ```
+    addpath('scripts')
+    addpath(fullfile('scripts', 'lib'))
+   	ds001_reslice_images
+    ```
+
+##### Other derived data
+The csv files containing the Euler characteristics can be recomputed in Matlab, using:
+    ```
+    addpath('scripts')
+    addpath(fullfile('scripts', 'lib'))
+   	ds001_euler_chars
+    ```
+    
 ### Analysis of ds000109
-Same as for ds000001, replacing all occurences of `001` by `109`.
+Same as for ds000001, replacing all occurences of `001` by `109` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2238/.
+
 
 ### Analysis of ds000120
-Same as for ds000001, replacing all occurences of `001` by `120`.
-
-<Instructions on how to (1) obtain raw data; (2) process it to create summary/derived data in the `results`>
-
-<Specify precise steps, including any datasets that need to be downloaded and path variables that need to be set>
+Same as for ds000001, replacing all occurences of `001` by `120` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2488/.
 
 # Contents overview
 
