@@ -32,15 +32,10 @@ You will also need to have Jupyter notebook installed, we recommend using [Anaco
 
 
 #### Second column
+Same as above but using `./figures/ds109_notebook.ipynb`.
 
-1. From a Terminal, run:
-
-    ```
-    jupyter notebook ./figures/ds109_notebook.ipynb
-    ```
-
-3. In the notebook, run all the cells up to the cell starting with "from lib import bland_altman" which will reproduce the second column of figure 1a.
-
+### Figure 1b
+Same as 1a but using `./figures/ds120_notebook.ipynb`.
 
 
 <Instructions on how to use summary/derived data in the `results` directory to create figures and tables>
