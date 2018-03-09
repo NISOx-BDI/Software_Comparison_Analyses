@@ -1,4 +1,4 @@
-Exploring the Impact of Analysis Software on fMRI Results
+# Exploring the Impact of Analysis Software on fMRI Results
 
 Supporting code to perform the analyses and create the figures of the manuscript with the same title available at <ADD_BIORXIV_DOI_WITH_LINK>.
 
