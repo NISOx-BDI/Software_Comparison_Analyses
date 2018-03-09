@@ -37,7 +37,7 @@ Same as Fig. 1 left but using `./figures/ds109_notebook.ipynb`.
 ### Fig. 1b
 Same as 1a but using `./figures/ds120_notebook.ipynb`.
 
-### Figure 2
+### Fig. 2
 #### Left sub-plot
 1. From a Terminal, run:
 
@@ -67,6 +67,14 @@ Same as Fig. 2 left but using `./figures/ds120_notebook.ipynb`.
 #### Right column
 Same as Fig. 3 left but using `./figures/ds109_notebook.ipynb`.
 
+### Fig. 4
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+3. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`.
 
 <Instructions on how to use summary/derived data in the `results` directory to create figures and tables>
 
