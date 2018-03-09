@@ -2,7 +2,7 @@
 
 Supporting code to perform the analyses and create the figures of the manuscript with the same title available at <ADD_BIORXIV_DOI_WITH_LINK>.
 
-# How to cite
+## How to cite
 
 To cite this repository, please cite the corresponding manuscript: 
 
@@ -28,7 +28,7 @@ You will also need to have Jupyter notebook installed, we recommend using [Anaco
     jupyter notebook ./figures/ds001_notebook.ipynb
     ```
 
-3. In the notebook, run all the cells up to the cell starting with "from lib import bland_altman" which will reproduce the first column of figure 1a.
+3. In the notebook, run all the cells up to the cell starting with `from lib import bland_altman` which will reproduce the first column of figure 1a.
 
 
 #### Second column
@@ -37,6 +37,21 @@ Same as above but using `./figures/ds109_notebook.ipynb`.
 ### Figure 1b
 Same as 1a but using `./figures/ds120_notebook.ipynb`.
 
+### Figure 2
+#### Left sub-plot
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+3. In the notebook, run all the cells up to the cell starting with `from lib import dice`.
+
+#### Middle sub-plot
+Same as 2 left but using `./figures/ds109_notebook.ipynb`.
+
+#### Right sub-plot
+Same as 2 left but using `./figures/ds120_notebook.ipynb`.
 
 <Instructions on how to use summary/derived data in the `results` directory to create figures and tables>
 
