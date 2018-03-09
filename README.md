@@ -104,6 +104,47 @@ Same as Fig. 6 left but using `./figures/ds109_notebook.ipynb`.
 
 ## Reproducing full analysis
 
+### Raw data
+To run the experiments included in the manuscript, raw data must be downloaded from [OpenfMRI.org](https://openfmri.org) and copied on your local computer:
+ - ds000001 revision 2.0.4: https://openfmri.org/dataset/ds000001/
+ - ds000109 revision 2.0.2: https://openfmri.org/dataset/ds000109/
+ - ds000120 revision 1.0.0: https://openfmri.org/dataset/ds000120/
+
+### Analysis of ds000001
+Given:
+ - `<PATH_TO_RAW_DATA>`: the path to the raw data for `ds000001` and
+ - `<PATH_TO_OUTPUT>`: the path to the output folder where the results should be stored.
+
+1. In `scripts/process_ds001_SPM.m` replace the values of `study_dir` and `results_dir` by `<PATH_TO_RAW_DATA>` and `<PATH_TO_OUTPUT>` respectively.
+
+2. In `scripts/process_ds001_FSL.py` and `scripts/process_ds001_AFNI.py` replace the values of `raw_dir` and `results_dir` by `<PATH_TO_RAW_DATA>` and `<PATH_TO_OUTPUT>` respectively.
+
+1. For the SPM analysis, inside Matlab run:
+
+    ```
+    addpath('scripts')
+    addpath(fullfile('scripts', 'lib'))
+    process_ds001_SPM
+    ```
+    
+2. For the FSL analysis, from a terminal run:
+
+    ```
+    python scripts/process_ds001_FSL.py
+    ```
+
+3. For the AFNI analysis, from a terminal run:
+
+    ```
+    python scripts/process_ds001_AFNI.py
+    ```
+
+### Analysis of ds000109
+Same as for ds000001, replacing all occurences of `001` by `109`.
+
+### Analysis of ds000120
+Same as for ds000001, replacing all occurences of `001` by `120`.
+
 <Instructions on how to (1) obtain raw data; (2) process it to create summary/derived data in the `results`>
 
 <Specify precise steps, including any datasets that need to be downloaded and path variables that need to be set>
