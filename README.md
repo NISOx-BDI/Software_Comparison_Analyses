@@ -1,14 +1,27 @@
-# Exploring the Impact of Analysis Software on fMRI Results
+Exploring the Impact of Analysis Software on fMRI Results
 
 Supporting code to perform the analyses and create the figures of the manuscript with the same title available at <ADD_BIORXIV_DOI_WITH_LINK>.
 
-## How to cite
+## Table of contents
+   * [How to cite?](#how-to-cite)
+   * [How to reproduce the figures?](#how-to-reproduce-the-figures)
+      * [Fig. 1a](#fig-1a)
+      * [Fig. 1b](#fig-1b)
+      * [Fig. 2](#fig-2)
+      * [Fig. 3](#fig-3)
+      * [Fig. 4](#fig-4)
+      * [Fig. 5](#fig-5)
+      * [Fig. 6](#fig-6)
+   * [How to rerun the full analysis?](#how-to-rerun-the-full-analysis)
+   * [Contents overview](#contents-overview)
+
+## How to cite?
 
 To cite this repository, please cite the corresponding manuscript: 
 
 "Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Thomas E. Nichols, Camille MaumetTechnical Report bioRxiv: 1-<ADD_NUM_OF_PAGES>. doi: <ADD_DOI_WITH_LINK>. 
 
-## Reproducing figures and tables
+## How to reproduce the figures?
 
 ### Dependencies
 To reproduce the figures, you will need to install the dependencies listed in `requirements.txt`, this can be done using pip with:
@@ -102,7 +115,7 @@ Same as Fig. 5 left but using `./figures/ds109_notebook.ipynb`.
 #### Right column
 Same as Fig. 6 left but using `./figures/ds109_notebook.ipynb`.
 
-## Reproducing full analysis
+## How to rerun the full analysis?
 
 ### Raw data
 To run the experiments included in the manuscript, raw data must be downloaded from [OpenfMRI.org](https://openfmri.org) and copied on your local computer:
@@ -173,7 +186,7 @@ Same as for ds000001, replacing all occurences of `001` by `109` and https://neu
 ### Analysis of ds000120
 Same as for ds000001, replacing all occurences of `001` by `120` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2488/.
 
-# Contents overview
+## Contents overview
 ```
  	ds001: Part of ds001 output data (excluding images)
 	ds109: Part of ds109 output data (excluding images)
