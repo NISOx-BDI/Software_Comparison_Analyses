@@ -76,9 +76,31 @@ Same as Fig. 3 left but using `./figures/ds109_notebook.ipynb`.
 
 3. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`.
 
-<Instructions on how to use summary/derived data in the `results` directory to create figures and tables>
+### Fig. 5
+#### Left column
+1. From a Terminal, run:
 
-<Specify precise steps, including any datasets that need to be downloaded and path variables that need to be set>
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+3. In the notebook, run all the cells up to the cell starting with `bland_altman.bland_altman('Bland-Altman Plots: Permutation Tests'`.
+
+#### Right column
+Same as Fig. 5 left but using `./figures/ds109_notebook.ipynb`.
+
+### Fig. 6
+#### Left column
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+3. In the notebook, run all the cells up to the cell starting with `reload(bland_altman) bland_altman.bland_altman_intra('Bland-Altman Plots: Parametric vs Permutation'`.
+
+#### Right column
+Same as Fig. 6 left but using `./figures/ds109_notebook.ipynb`.
 
 ## Reproducing full analysis
 
