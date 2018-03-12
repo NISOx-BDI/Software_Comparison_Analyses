@@ -3,8 +3,8 @@
 Supporting code to perform the analyses and create the figures of the manuscript with the same title available at <ADD_BIORXIV_DOI_WITH_LINK>.
 
 ## Table of contents
-   * [How to cite?](#how-to-cite)
-   * [How to reproduce the figures?](#how-to-reproduce-the-figures)
+   * [How to cite](#how-to-cite)
+   * [How to reproduce the figures](#how-to-reproduce-the-figures)
       * [Fig. 1a](#fig-1a)
       * [Fig. 1b](#fig-1b)
       * [Fig. 2](#fig-2)
@@ -12,7 +12,7 @@ Supporting code to perform the analyses and create the figures of the manuscript
       * [Fig. 4](#fig-4)
       * [Fig. 5](#fig-5)
       * [Fig. 6](#fig-6)
-   * [How to rerun the full analysis?](#how-to-rerun-the-full-analysis)
+   * [How to rerun the full analysis](#how-to-rerun-the-full-analysis)
    * [Contents overview](#contents-overview)
 
 ## How to cite
