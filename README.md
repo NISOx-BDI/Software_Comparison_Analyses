@@ -15,13 +15,13 @@ Supporting code to perform the analyses and create the figures of the manuscript
    * [How to rerun the full analysis?](#how-to-rerun-the-full-analysis)
    * [Contents overview](#contents-overview)
 
-## How to cite?
+## How to cite
 
 To cite this repository, please cite the corresponding manuscript: 
 
 "Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Thomas E. Nichols, Camille MaumetTechnical Report bioRxiv: 1-<ADD_NUM_OF_PAGES>. doi: <ADD_DOI_WITH_LINK>. 
 
-## How to reproduce the figures?
+## How to reproduce the figures
 
 ### Dependencies
 To reproduce the figures, you will need to install the dependencies listed in `requirements.txt`, this can be done using pip with:
@@ -115,7 +115,7 @@ Same as Fig. 5 left but using `./figures/ds109_notebook.ipynb`.
 #### Right column
 Same as Fig. 6 left but using `./figures/ds109_notebook.ipynb`.
 
-## How to rerun the full analysis?
+## How to rerun the full analysis
 
 ### Raw data
 To run the experiments included in the manuscript, raw data must be downloaded from [OpenfMRI.org](https://openfmri.org) and copied on your local computer:
