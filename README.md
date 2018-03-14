@@ -5,13 +5,15 @@ Supporting code to perform the analyses and create the figures of the manuscript
 ## Table of contents
    * [How to cite](#how-to-cite)
    * [How to reproduce the figures](#how-to-reproduce-the-figures)
-      * [Fig. 1a](#fig-1a)
-      * [Fig. 1b](#fig-1b)
+      * [Fig. 1](#fig-1)
       * [Fig. 2](#fig-2)
-      * [Fig. 3](#fig-3)
+      * [Fig. 3a](#fig-3a)
+      * [Fig. 3b](#fig-3b)
       * [Fig. 4](#fig-4)
       * [Fig. 5](#fig-5)
       * [Fig. 6](#fig-6)
+      * [Fig. 7](#fig-7)
+      * [Fig. 8](#fig-8)
    * [How to rerun the full analysis](#how-to-rerun-the-full-analysis)
    * [Contents overview](#contents-overview)
 
@@ -19,7 +21,7 @@ Supporting code to perform the analyses and create the figures of the manuscript
 
 To cite this repository, please cite the corresponding manuscript: 
 
-"Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Thomas E. Nichols, Camille MaumetTechnical Report bioRxiv: 1-<ADD_NUM_OF_PAGES>. doi: <ADD_DOI_WITH_LINK>. 
+"Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Thomas E. Nichols, Camille Maumet. Technical Report. bioRxiv: 1-<ADD_NUM_OF_PAGES>. doi: <ADD_DOI_WITH_LINK>. 
 
 ## How to reproduce the figures
 
@@ -31,7 +33,41 @@ pip install -r requirements.txt
 
 You will also need to have Jupyter notebook installed, we recommend using [Anaconda](https://conda.io/docs/user-guide/install/index.html) to perform the install.
 
-### Fig. 1a
+### Fig. 1
+
+#### Left column
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+2. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`. In this cell, make sure that `x_coords=[4, 32]`. Running this cell will then reproduce the first column of figure 1.
+
+#### Middle column
+Same as Fig. 1, but using `./figures/ds109_notebook.ipynb` and setting `x_coords=[0, 32]`.
+
+#### Right column
+Same as Fig. 1, but using `./figures/ds120_notebook.ipynb` and setting `x_coords=[0, 32]`.
+
+### Fig. 2
+
+#### Left column
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+2. In the notebook, run all the cells up to the cell starting with `from lib import plot_stat_images`. In this cell, make sure that the coordinates being inputted to the `plot_stat_images` function are `[-17, 1, 15]`. Running this cell will then repoduce the first column of figure 2.
+
+#### Middle column
+Same as Fig. 2, but using `./figures/ds109_notebook.ipynb`.
+
+#### Right column
+Same as Fig. 2, but using `./figures/ds120_notebook.ipynb`. 
+
+### Fig. 3a
 
 #### Left column
 
@@ -41,16 +77,16 @@ You will also need to have Jupyter notebook installed, we recommend using [Anaco
     jupyter notebook ./figures/ds001_notebook.ipynb
     ```
 
-3. In the notebook, run all the cells up to the cell starting with `from lib import bland_altman` which will reproduce the first column of figure 1a.
+2. In the notebook, run all the cells up to the cell starting with `from lib import bland_altman` which will reproduce the first column of figure 3a.
 
 
 #### Right column
-Same as Fig. 1 left but using `./figures/ds109_notebook.ipynb`.
+Same as Fig. 3a left but using `./figures/ds109_notebook.ipynb`.
 
-### Fig. 1b
-Same as 1a but using `./figures/ds120_notebook.ipynb`.
+### Fig. 3b
+Same as 3a but using `./figures/ds120_notebook.ipynb`.
 
-### Fig. 2
+### Fig. 4
 #### Left sub-plot
 1. From a Terminal, run:
 
@@ -58,38 +94,16 @@ Same as 1a but using `./figures/ds120_notebook.ipynb`.
     jupyter notebook ./figures/ds001_notebook.ipynb
     ```
 
-3. In the notebook, run all the cells up to the cell starting with `from lib import dice`.
+2. In the notebook, run all the cells up to the cell starting with `from lib import dice`.
 
 #### Middle sub-plot
-Same as Fig. 2 left but using `./figures/ds109_notebook.ipynb`.
+Same as Fig. 4 left but using `./figures/ds109_notebook.ipynb`.
 
 #### Right sub-plot
-Same as Fig. 2 left but using `./figures/ds120_notebook.ipynb`.
-
-### Fig. 3
-
-#### Left column
-1. From a Terminal, run:
-
-    ```
-    jupyter notebook ./figures/ds001_notebook.ipynb
-    ```
-
-3. In the notebook, run all the cells up to the cell starting with `from lib import euler_characteristics`.
-
-#### Right column
-Same as Fig. 3 left but using `./figures/ds109_notebook.ipynb`.
-
-### Fig. 4
-1. From a Terminal, run:
-
-    ```
-    jupyter notebook ./figures/ds001_notebook.ipynb
-    ```
-
-3. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`.
+Same as Fig. 4 left but using `./figures/ds120_notebook.ipynb`.
 
 ### Fig. 5
+
 #### Left column
 1. From a Terminal, run:
 
@@ -97,12 +111,21 @@ Same as Fig. 3 left but using `./figures/ds109_notebook.ipynb`.
     jupyter notebook ./figures/ds001_notebook.ipynb
     ```
 
-3. In the notebook, run all the cells up to the cell starting with `bland_altman.bland_altman('Bland-Altman Plots: Permutation Tests'`.
+2. In the notebook, run all the cells up to the cell starting with `from lib import euler_characteristics`.
 
 #### Right column
 Same as Fig. 5 left but using `./figures/ds109_notebook.ipynb`.
 
 ### Fig. 6
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+2. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`.
+
+### Fig. 7
 #### Left column
 1. From a Terminal, run:
 
@@ -110,10 +133,23 @@ Same as Fig. 5 left but using `./figures/ds109_notebook.ipynb`.
     jupyter notebook ./figures/ds001_notebook.ipynb
     ```
 
-3. In the notebook, run all the cells up to the cell starting with `reload(bland_altman) bland_altman.bland_altman_intra('Bland-Altman Plots: Parametric vs Permutation'`.
+2. In the notebook, run all the cells up to the cell starting with `bland_altman.bland_altman('Bland-Altman Plots: Permutation Tests')`.
 
 #### Right column
-Same as Fig. 6 left but using `./figures/ds109_notebook.ipynb`.
+Same as Fig. 7 left but using `./figures/ds109_notebook.ipynb`.
+
+### Fig. 8
+#### Left column
+1. From a Terminal, run:
+
+    ```
+    jupyter notebook ./figures/ds001_notebook.ipynb
+    ```
+
+2. In the notebook, run all the cells up to the cell starting with `reload(bland_altman) bland_altman.bland_altman_intra('Bland-Altman Plots: Parametric vs Permutation')`.
+
+#### Right column
+Same as Fig. 8 left but using `./figures/ds109_notebook.ipynb`.
 
 ## How to rerun the full analysis
 
@@ -134,7 +170,7 @@ Given:
 
 2. In `scripts/process_ds001_FSL.py` and `scripts/process_ds001_AFNI.py` replace the values of `raw_dir` and `results_dir` by `<PATH_TO_RAW_DATA>` and `<PATH_TO_OUTPUT>` respectively.
 
-1. For the SPM analysis, inside Matlab run:
+3. For the SPM analysis, inside Matlab run:
 
     ```
     addpath('scripts')
@@ -144,13 +180,13 @@ Given:
     
     This will create onsets, preprocess the data, and run first and group level analyses. 
     
-2. For the FSL analysis, from a terminal run:
+4. For the FSL analysis, from a terminal run:
 
     ```
     python scripts/process_ds001_FSL.py
     ```
 
-3. For the AFNI analysis, from a terminal run:
+5. For the AFNI analysis, from a terminal run:
 
     ```
     python scripts/process_ds001_AFNI.py
@@ -184,13 +220,13 @@ Same as for ds000001, replacing all occurences of `001` by `109` and https://neu
 
 
 ### Analysis of ds000120
-Same as for ds000001, replacing all occurences of `001` by `120` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2488/.
+Same as for ds000001, replacing all occurences of `001` by `120` and https://neurovault.org/collections/2209/ by https://neurovault.org/collections/2982/.
 
 ## Contents overview
 ```
  	ds001: Part of ds001 output data (excluding images)
 	ds109: Part of ds109 output data (excluding images)
-	ds120: Part of ds109 output data (excluding images)
+	ds120: Part of ds120 output data (excluding images)
 	figures: Scripts and notebooks to reproduce the figures
 	scripts: Scripts to rerun the analysis 
 	.gitignore: git configuration file
