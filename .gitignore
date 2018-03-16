@@ -29,6 +29,7 @@ Neurovault_data/
 scripts/AFNI_sub01_output
 *.DS_Store
 *.pyc
+*.pptx
 
 Neurovault_data/
 .ipynb_checkpoints/
