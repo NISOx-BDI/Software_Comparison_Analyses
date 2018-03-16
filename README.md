@@ -45,10 +45,10 @@ You will also need to have Jupyter notebook installed, we recommend using [Anaco
 2. In the notebook, run all the cells up to the cell starting with `from lib import plot_excursion_sets`. In this cell, make sure that `x_coords=[4, 32]`. Running this cell will then reproduce the first column of figure 1.
 
 #### Middle column
-Same as Fig. 1, but using `./figures/ds109_notebook.ipynb` and setting `x_coords=[0, 32]`.
+Same as Fig. 1, but using `./figures/ds109_notebook.ipynb`; again, make sure that `x_coords=[0, 32]`.
 
 #### Right column
-Same as Fig. 1, but using `./figures/ds120_notebook.ipynb` and setting `x_coords=[0, 32]`.
+Same as Fig. 1, but using `./figures/ds120_notebook.ipynb` again, make sure that `x_coords=[0, 32]`.
 
 ### Fig. 2
 
