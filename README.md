@@ -1,6 +1,6 @@
 # Exploring the Impact of Analysis Software on fMRI Results
 
-Supporting code to perform the analyses and create the figures of the manuscript with the same title available at <ADD_BIORXIV_DOI_WITH_LINK>.
+Supporting code to perform the analyses and create the figures of the manuscript with the same title available at [https://doi.org/10.1101/285585](https://doi.org/10.1101/285585).
 
 ## Table of contents
    * [How to cite](#how-to-cite)
@@ -21,7 +21,7 @@ Supporting code to perform the analyses and create the figures of the manuscript
 
 To cite this repository, please cite the corresponding manuscript: 
 
-"Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Thomas E. Nichols, Camille Maumet. Technical Report. bioRxiv: 1-<ADD_NUM_OF_PAGES>. doi: <ADD_DOI_WITH_LINK>. 
+"Exploring the Impact of Analysis Software on fMRI Results" Alexander Bowring, Camille Maumet\*, Thomas Nichols\*. bioRxiv 285585; doi: [10.1101/285585](https://doi.org/10.1101/285585) 
 
 ## How to reproduce the figures
 
